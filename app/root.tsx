@@ -27,8 +27,11 @@ import {registerStorefrontSettings} from '~/settings';
 import {seoPayload} from '~/lib/seo.server';
 import styles from '~/styles/app.css';
 
+import { registerPlugins } from '~/plugins/index.jsx';
+
 registerSections();
 registerStorefrontSettings();
+registerPlugins();
 
 // This is important to avoid re-fetching root queries on sub-navigations
 export const shouldRevalidate: ShouldRevalidateFunction = ({
