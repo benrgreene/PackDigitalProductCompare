@@ -17,6 +17,7 @@ import {ColorVariantSelector} from './ColorVariantSelector';
 import {ProductItemMedia} from './ProductItemMedia/ProductItemMedia';
 import {ProductItemPrice} from './ProductItemPrice';
 import {QuickShop} from './QuickShop';
+import {AddToCompareButton} from '~/plugins/product-compare/snippets/AddToCompareButton.jsx';
 
 interface ProductItemProps {
   enabledColorNameOnHover?: boolean;
@@ -164,6 +165,8 @@ export function ProductItem({
           />
         )}
       </div>
+
+      <AddToCompareButton product={initialProduct} />
 
       {enabledQuickShop && (
         <QuickShop

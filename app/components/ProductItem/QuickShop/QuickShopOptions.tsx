@@ -29,7 +29,7 @@ export function QuickShopOptions({
     if (!selectedProduct) return {name: '', values: [], text: ''};
     // Find first non-color option that has more than one value for quick shop
     const _option = selectedProduct.options?.find(({name, values}) => {
-      return name !== COLOR_OPTION_NAME && values.length > 1;
+      return values.length > 1;
     });
     return {
       name: _option?.name || '',
